@@ -10,161 +10,40 @@ Bahasa pemrograman yang digunakan:
 
 ---
 
-## 1. Apa itu Kalkulus?
+## Struktur Repository
 
-Kalkulus adalah cabang matematika yang mempelajari **perubahan** dan **akumulasi**.
+Setiap topik kalkulus dibagi menjadi **problem kecil dan terisolasi**.
 
-Secara garis besar, kalkulus terbagi menjadi:
+Setiap problem memiliki struktur:
 
-* **Turunan (Derivative)** → mengukur perubahan
-* **Integral** → mengukur akumulasi
+* `problem.md` → soal
+* `explanation.md` → penjelasan logika
+* `python/solution.py` → kode jawaban
 
-Contoh real-life:
-
-* Turunan → kecepatan dari posisi
-* Integral → jarak dari kecepatan
+Dengan struktur ini, menambah problem baru cukup **menambah folder baru**.
 
 ---
 
-## 2. Konsep Dasar Fungsi
+## Calculus
 
-Sebelum masuk kalkulus, kita butuh fungsi.
+### Derivative (Turunan)
 
-Contoh fungsi:
+Daftar problem turunan yang tersedia:
 
-[
-f(x) = 3x^2 + 2x
-]
-
-Artinya:
-
-* Input: x
-* Output: nilai dari rumus
-
-Dalam kode (Python):
-
-```text
-f(x) = 3*x*x + 2*x
-```
+* [Problem 01 – Turunan Numerik Dasar](./calculus/derivative/problem_01)
+* [Problem 02 – Turunan Fungsi Non-Linear](./calculus/derivative/problem_02)
 
 ---
 
-## 3. Limit (Fondasi Kalkulus)
+### Integral (Coming Soon)
 
-Limit menjawab pertanyaan:
-
-> "Jika x mendekati suatu nilai, apa yang terjadi pada f(x)?"
-
-Contoh:
-
-[
-\lim_{x \to 2} (3x^2 + 2x)
-]
-
-Karena fungsi ini kontinu, kita bisa langsung substitusi:
-
-[
-= 3(2)^2 + 2(2) = 16
-]
-
-Limit adalah **dasar** dari turunan dan integral.
+Problem integral numerik akan ditambahkan setelah turunan dasar selesai.
 
 ---
 
-## 4. Turunan (Derivative)
+## Cara Menggunakan Repository
 
-Turunan mengukur **seberapa cepat suatu nilai berubah**.
-
-Definisi matematis:
-
-[
-f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
-]
-
-Untuk fungsi:
-
-[
-f(x) = 3x^2 + 2x
-]
-
-Turunannya:
-
-[
-f'(x) = 6x + 2
-]
-
-Makna:
-
-* Jika x = 1 → perubahan = 8
-* Jika x besar → perubahan makin besar
-
----
-
-## 5. Integral (Anti-Turunan)
-
-Integral adalah kebalikan dari turunan.
-
-Jika:
-
-[
-f'(x) = 6x + 2
-]
-
-Maka:
-
-[
-\int (6x + 2) dx = 3x^2 + 2x + C
-]
-
-Integral juga bisa diartikan sebagai **luas di bawah kurva**.
-
----
-
-## 6. Integral Tentu
-
-Integral tentu menghitung nilai **akumulasi dalam rentang tertentu**.
-
-Contoh:
-
-[
-\int_0^2 (3x^2 + 2x) dx
-]
-
-Hasil manual:
-
-[
-= [x^3 + x^2]_0^2 = 12
-]
-
-Makna:
-
-* Total akumulasi nilai fungsi dari x=0 sampai x=2
-
----
-
-## 7. Kenapa Programmer Perlu Kalkulus?
-
-* Game → movement, physics
-* AI → gradient descent
-* Data → optimisasi
-* Grafik → kurva & animasi
-
-Kalau bisa koding **dan** paham kalkulus:
-
-> otak kiri dan kanan nyala barengan
-
----
-
-## Next Step
-
-Langkah selanjutnya di repo ini:
-
-1. Implementasi fungsi dari nol (Python)
-2. Turunan numerik (tanpa library)
-3. Integral numerik (trapezoidal & Simpson)
-4. Visualisasi integral dengan JavaScript
-
----
-
-> Fokus repo ini bukan cepat, tapi **paham**.
-> Kode boleh sederhana, logika harus jelas.
+1. Pilih problem dari daftar di atas
+2. Baca `problem.md`
+3. Pahami `explanation.md`
+4. Jalankan `solution.py`
